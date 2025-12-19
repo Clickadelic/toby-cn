@@ -1,0 +1,15 @@
+{
+  "name": "utils",
+  "type": "ui",
+  "files": [
+    {
+      "path": "lib/utils.ts",
+      "content": "import { InertiaLinkProps } from '@inertiajs/react';\nimport { type ClassValue, clsx } from 'clsx';\nimport { twMerge } from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n    return twMerge(clsx(inputs));\n}\n\nexport function isSameUrl(\n    url1: NonNullable<InertiaLinkProps['href']>,\n    url2: NonNullable<InertiaLinkProps['href']>,\n) {\n    return resolveUrl(url1) === resolveUrl(url2);\n}\n\nexport function resolveUrl(url: NonNullable<InertiaLinkProps['href']>): string {\n    return typeof url === 'string' ? url : url.url;\n}\n"
+    }
+  ],
+  "dependencies": [
+    "clsx",
+    "tailwind-merge",
+    "@inertiajs/react"
+  ]
+}
