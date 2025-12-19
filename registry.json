@@ -2,6 +2,6 @@
   "name": "clickadelic-ui",
   "url": "https://raw.githubusercontent.com/Clickadelic/shadcn-registry/main",
   "components": [
-    "app-tile"
+    "sortable-app-tile"
   ]
 }
